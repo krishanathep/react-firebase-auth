@@ -6,6 +6,7 @@ import Register from './components/Register'
 import NoMatch from './components/NoMatch'
 import firebase, { auth, provider } from './firebase'
 
+
 export class App extends Component {
   constructor(props){
     super(props)

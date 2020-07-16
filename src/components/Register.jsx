@@ -43,52 +43,55 @@ export class Register extends Component {
     return (
       <div className="Register container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-6 offset-md-3">
             <div className="card mt-5">
               <div className="card-header">
-                <h5 className="card-title">
+              <span className="card-title">
                   SIGN UP
-                </h5>
+                </span>
               </div>
               <div className="card-body">
                 <form onSubmit={this.handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor="">E-Mail :</label>
+                    <label>E-Mail Address</label>
                     <input
-                      type="text"
+                      type="email"
                       className="form-control"
                       name="email"
                       value={email}
                       onChange={this.handleChange}
+                      placeholder='E-Mail Address...'
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="">Username :</label>
+                    <label>User Name</label>
                     <input
                       type="text"
                       className="form-control"
                       name="username"
                       value={username}
                       onChange={this.handleChange}
+                      placeholder='User Name...'
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="">Password :</label>
+                    <label>Password</label>
                     <input
                       type="password"
                       className="form-control"
                       name="password"
                       value={password}
                       onChange={this.handleChange}
+                      placeholder='Password...'
                     />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group mt-4">
                     <input
                       type="submit"
-                      className="btn btn-primary btn-block btn-lg"
+                      className="btn btn-primary btn-block"
                       value="Sign Up"
                     />
-                    <Link to='/login' className='btn btn-outline-primary btn-block btn-lg'>Sign In</Link>
+                    <Link to='/' className='btn btn-outline-primary btn-block'>Sign In</Link>
                   </div>
                 </form>
               </div>

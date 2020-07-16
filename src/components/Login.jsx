@@ -23,18 +23,18 @@ export class Login extends Component {
     const { email, password } = this.state;
 
     firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(user => {
-            this.props.history.push('/home')
-            console.log(user)
-        })
-        .catch(error => {
-            this.setState({
-                error
-            })
-            alert(error)
-        })
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        this.props.history.push("/home");
+        console.log(user);
+      })
+      .catch((error) => {
+        this.setState({
+          error,
+        });
+        alert(error);
+      });
   };
 
   render() {
@@ -42,40 +42,57 @@ export class Login extends Component {
     return (
       <div className="Login container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-6 offset-md-3">
             <div className="card mt-5">
               <div className="card-header">
-                <h5 className="card-title">SIGN IN</h5>
+                <span className="card-title">SIGN IN</span>
               </div>
               <div className="card-body">
                 <form onSubmit={this.handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor="">E-Mail :</label>
-                    <input 
-                    type="text" 
-                    className="form-control" 
-                    name="email" 
-                    value={email}
-                    onChange={this.handleChange}
+                    <label>E-Mail Address</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="email"
+                      value={email}
+                      onChange={this.handleChange}
+                      placeholder='E-Mail Address...'
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="">Password :</label>
+                    <label>Password</label>
                     <input
                       type="password"
                       className="form-control"
                       name="password"
                       value={password}
                       onChange={this.handleChange}
+                      placeholder='Password...'
                     />
+                  </div>
+                  <div className="form-check mb-3">
+                    <label className="form-check-label">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        value=""
+                      />
+                      Remember Me
+                    </label>
                   </div>
                   <div className="form-group">
                     <input
                       type="submit"
-                      value="Sing In"
-                      className="btn btn-primary btn-block btn-lg"
+                      value="Sign In"
+                      className="btn btn-primary btn-block"
                     />
-                    <Link to='/register' className='btn btn-outline-primary btn-block btn-lg'>Sign Up</Link>
+                    <Link
+                      to="/register"
+                      className="btn btn-outline-primary btn-block"
+                    >
+                      Sing Up
+                    </Link>
                   </div>
                 </form>
               </div>
