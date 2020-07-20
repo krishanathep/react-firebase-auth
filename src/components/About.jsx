@@ -20,7 +20,7 @@ class About extends Component {
       <div className="About">
         <Navbar />
         <div className="container">
-          <h1>This is an About page!</h1>
+          <h1>About page!</h1>
         </div>
       </div>
     );

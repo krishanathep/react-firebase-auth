@@ -31,37 +31,49 @@ export class Navbar extends Component {
         <nav className="navbar navbar-expand-sm bg-primary navbar-dark">
           <div className="container fluid">
             <Link to="/home" className="navbar-brand">
-              REACTJS FIREBASE AUTH
+              REACTJS FIREBASE
             </Link>
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/home">
-                  HOME
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  ABOUT
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  id="navbardrop"
-                  data-toggle="dropdown"
-                >
-                  <i className="fa fa-user"></i>
-                </Link>
-                <div className="dropdown-menu">
-                  <Link className="dropdown-item">
-                    {this.state.user.displayName}
+
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/home">
+                    HOME
                   </Link>
-                  <Link onClick={this.logOutUser} className="dropdown-item">
-                    Sing Out
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    ABOUT
                   </Link>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    id="navbardrop"
+                    data-toggle="dropdown"
+                  >
+                    <i className="fa fa-user"></i>
+                  </Link>
+                  <div className="dropdown-menu">
+                    <Link className="dropdown-item">
+                      {this.state.user.displayName}
+                    </Link>
+                    <Link onClick={this.logOutUser} className="dropdown-item">
+                      Sing Out
+                    </Link>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>

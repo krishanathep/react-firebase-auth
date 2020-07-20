@@ -17,7 +17,7 @@ const Home = (props) => {
     <div className="Home">
       <Navbar />
       <div className="container">
-        <h1>This is an Home page!</h1>
+        <h1>Home page!</h1>
       </div>
     </div>
   );
