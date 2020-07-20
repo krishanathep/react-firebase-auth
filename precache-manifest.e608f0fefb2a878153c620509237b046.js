@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf81e7cf21c9287acb917c784d58afdf",
+    "revision": "45e8dc1ac66b25f3203a431da61a03e1",
     "url": "/react-firebase-auth/index.html"
   },
   {
-    "revision": "3f78ec042f0f09725b78",
-    "url": "/react-firebase-auth/static/css/main.730482e8.chunk.css"
+    "revision": "5a7cfeb249f4fca5b387",
+    "url": "/react-firebase-auth/static/css/main.56622036.chunk.css"
   },
   {
     "revision": "d71b11eb426b20c19f6c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-firebase-auth/static/js/2.c8912d0d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f78ec042f0f09725b78",
-    "url": "/react-firebase-auth/static/js/main.67d6eeda.chunk.js"
+    "revision": "5a7cfeb249f4fca5b387",
+    "url": "/react-firebase-auth/static/js/main.7796d0dd.chunk.js"
   },
   {
     "revision": "f81b6c2738226145d3e6",
