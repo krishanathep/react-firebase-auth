@@ -39,12 +39,12 @@ export class Register extends Component {
   };
 
   render() {
-    const { email, username, password, error } = this.state;
+    const { email, username, password } = this.state;
     return (
       <div className="Register container">
         <div className="row">
-          <div className="col-md-6 offset-md-3">
-            <div className="card mt-5">
+          <div className="col-md-4 offset-md-4">
+            <div className="card shadow-lg mt-5">
               <div className="card-header">
               <span className="card-title">
                   SIGN UP
@@ -52,19 +52,23 @@ export class Register extends Component {
               </div>
               <div className="card-body">
                 <form onSubmit={this.handleSubmit}>
-                  <div className="form-group">
-                    <label>E-Mail Address</label>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="fas fa-envelope"></i></span>
+                    </div>
                     <input
                       type="email"
                       className="form-control"
                       name="email"
                       value={email}
                       onChange={this.handleChange}
-                      placeholder='E-Mail Address...'
+                      placeholder='E-mail'
                     />
                   </div>
-                  <div className="form-group">
-                    <label>User Name</label>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="fa fa-user"></i></span>
+                    </div>
                     <input
                       type="text"
                       className="form-control"
@@ -74,8 +78,10 @@ export class Register extends Component {
                       placeholder='User Name...'
                     />
                   </div>
-                  <div className="form-group">
-                    <label>Password</label>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text"><i className="fas fa-key"></i></span>
+                    </div>
                     <input
                       type="password"
                       className="form-control"
@@ -91,7 +97,9 @@ export class Register extends Component {
                       className="btn btn-primary btn-block"
                       value="Sign Up"
                     />
-                    <Link to='/' className='btn btn-outline-primary btn-block'>Sign In</Link>
+                  </div>
+                  <div className="from-group" align='center'>
+                    <Link to='/'>Sign In</Link>
                   </div>
                 </form>
               </div>

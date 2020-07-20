@@ -42,33 +42,37 @@ export class Login extends Component {
     return (
       <div className="Login container">
         <div className="row">
-          <div className="col-md-6 offset-md-3">
-            <div className="card mt-5">
+          <div className="col-md-4 offset-md-4">
+            <div className="card shadow-lg mt-5">
               <div className="card-header">
                 <span className="card-title">SIGN IN</span>
               </div>
               <div className="card-body">
                 <form onSubmit={this.handleSubmit}>
-                  <div className="form-group">
-                    <label>E-Mail Address</label>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className='input-group-text'><i className="fas fa-envelope"></i></span>
+                    </div>
                     <input
                       type="email"
                       className="form-control"
                       name="email"
                       value={email}
                       onChange={this.handleChange}
-                      placeholder='E-Mail Address...'
+                      placeholder='E-mail'
                     />
                   </div>
-                  <div className="form-group">
-                    <label>Password</label>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className='input-group-text'><i className="fas fa-key"></i></span>
+                    </div>
                     <input
                       type="password"
                       className="form-control"
                       name="password"
                       value={password}
                       onChange={this.handleChange}
-                      placeholder='Password...'
+                      placeholder='Password'
                     />
                   </div>
                   <div className="form-check mb-3">
@@ -87,12 +91,15 @@ export class Login extends Component {
                       value="Sign In"
                       className="btn btn-primary btn-block"
                     />
+                  </div>
+                  <div className="form-group">
+                  <p align='center'>Don't have an account?&nbsp;
                     <Link
                       to="/register"
-                      className="btn btn-outline-primary btn-block"
                     >
                       Sing Up
                     </Link>
+                    </p>
                   </div>
                 </form>
               </div>

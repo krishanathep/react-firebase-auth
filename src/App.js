@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Register from './components/Register'
 import NoMatch from './components/NoMatch'
-import firebase, { auth, provider } from './firebase'
+import firebase, { auth } from './firebase'
 
 
 export class App extends Component {
