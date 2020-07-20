@@ -75,7 +75,7 @@ export class Register extends Component {
                       name="username"
                       value={username}
                       onChange={this.handleChange}
-                      placeholder='User Name...'
+                      placeholder='User name'
                     />
                   </div>
                   <div className="input-group form-group">
@@ -88,7 +88,7 @@ export class Register extends Component {
                       name="password"
                       value={password}
                       onChange={this.handleChange}
-                      placeholder='Password...'
+                      placeholder='Password'
                     />
                   </div>
                   <div className="form-group mt-4">
