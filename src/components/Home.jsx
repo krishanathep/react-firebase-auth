@@ -15,7 +15,7 @@ const Home = (props) => {
 
   return (
     <div className="Home">
-      <Navbar />
+      <Navbar/>
       <div className="container">
         <h1>Home page!</h1>
       </div>
